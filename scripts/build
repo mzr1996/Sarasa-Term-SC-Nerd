@@ -39,14 +39,14 @@ done
 
 echo "generating ttc from ttf"
 cd "$root_dir"
-python otf2otc.py -o $sarasa_nerd_dir/sarasa-term-sc-nerd.ttc $sarasa_nerd_dir/sarasa-term-sc-nerd-*.ttf
+python otf2otc.py -o $sarasa_nerd_dir/SarasaTermSCNerdFont.ttc $sarasa_nerd_dir/SarasaTermSCNerdFont-*.ttf
 cd "$sarasa_nerd_dir"
 echo "creating tarball of ttf files"
-COPYFILE_DISABLE=1 tar -czvf sarasa-term-sc-nerd.ttf.tar.gz sarasa-term-sc-*.ttf
+COPYFILE_DISABLE=1 tar -czvf sarasa-term-sc-nerd.ttf.tar.gz SarasaTermSCNerdFont-*.ttf
 echo "creating tarball of ttc files"
-COPYFILE_DISABLE=1 tar -czvf sarasa-term-sc-nerd.ttc.tar.gz sarasa-term-sc-*.ttc
+COPYFILE_DISABLE=1 tar -czvf sarasa-term-sc-nerd.ttc.tar.gz SarasaTermSCNerdFont.ttc
 echo "creating 7zip of ttc files"
-7zz a -mx9 sarasa-term-sc-nerd.ttc.7z sarasa-term-sc-*.ttc
+7zz a -mx9 sarasa-term-sc-nerd.ttc.7z SarasaTermSCNerdFont.ttc
 echo "creating 7zip of ttf files"
-7zz a -mx9 sarasa-term-sc-nerd.ttf.7z sarasa-term-sc-*.ttf
+7zz a -mx9 sarasa-term-sc-nerd.ttf.7z SarasaTermSCNerdFont-*.ttf
 cd "$root_dir"
